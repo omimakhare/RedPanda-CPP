@@ -48,6 +48,7 @@
 #include "vcs/gituserconfigdialog.h"
 #include "widgets/infomessagebox.h"
 #include "widgets/newtemplatedialog.h"
+#include "QSimpleUpdater.h"
 
 #include <QCloseEvent>
 #include <QComboBox>
@@ -8114,5 +8115,16 @@ bool MainWindow::isQuitting() const
 bool MainWindow::isClosingAll() const
 {
     return mClosingAll;
+}
+
+
+void MainWindow::on_actionCheck_For_Update_triggered()
+{
+    const QString DEFS_URL = "https://raw.githubusercontent.com/"
+                                    "alex-spataru/QSimpleUpdater/master/tutorial/"
+                                    "definitions/updates.json";
+    QSimpleUpdater* updater = QSimpleUpdater::getInstance();
+    updater->checkForUpdates();
+
 }
 

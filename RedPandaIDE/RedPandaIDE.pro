@@ -13,6 +13,8 @@ isEmpty(APP_VERSION) {
     APP_VERSION=1.4
 }
 
+include(../3rd-party/QSimpleUpdater/QSimpleUpdater.pri)
+
 macos: {
     # This package needs to be installed via homebrew before we can compile it
     INCLUDEPATH += \

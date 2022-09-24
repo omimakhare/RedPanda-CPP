@@ -346,6 +346,10 @@ private slots:
     void onTableIssuesCopyAll();
     void onTableIssuesCopy();
 
+    void onUpdateCheckFinished();
+    void onUpdateAppcastDownloaded();
+    void onUpdateDownloaded();
+
     void on_actionNew_triggered();
 
     void on_EditorTabsLeft_tabCloseRequested(int index);
@@ -700,6 +704,8 @@ private slots:
     void on_actionGo_to_Line_triggered();
 
     void on_actionNew_Template_triggered();
+
+    void on_actionCheck_For_Update_triggered();
 
 private:
     Ui::MainWindow *ui;
